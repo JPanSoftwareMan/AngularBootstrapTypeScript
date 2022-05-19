@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Pipelines Data</h1>
+
+<p>This component demonstrates fetching data from the back end REST APIs by .NET Core 3.1, SQL Server, EF and C#.</p>
+
+<p *ngIf="!Pipelines"><em>Loading...</em></p>
+
+<table class='table table-striped table-bordered  table-hover' aria-labelledby="tableLabel" *ngIf="Pipelines">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>License Number</th>
+      <th>Length</th>
+      <th>Operator</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of Pipelines">
+      <td>{{ forecast.id }}</td>
+      <td>{{ forecast.name }}</td>
+      <td>{{ forecast.licenseNumber }}</td>
+      <td>{{ forecast.length }}</td>
+      <td>{{ forecast.operator }}</td>
+    </tr>
+  </tbody>
+</table>
